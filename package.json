@@ -1,8 +1,8 @@
 {
-  "name": "rx-clock",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+	"name": "rx-clock",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
 	"scripts": {
 		"dev": "vite",
 		"build": "tsc && vite build",
@@ -31,3 +31,4 @@
 		"vite": "^4.4.7"
 	}
 }
+

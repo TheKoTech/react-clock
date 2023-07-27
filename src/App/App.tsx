@@ -1,18 +1,10 @@
-import { useEffect } from 'react'
 import './App.css'
-import { tap } from 'rxjs'
-import { clock$ } from '../clock'
-import { Clock } from '../interfaces/clock.interface'
+import { useApp } from './App.hook'
 
 function App() {
-	useEffect(() => {
-		const sub = clock$
-			.pipe(tap((val: Clock) => console.log(val.seconds)))
-			.subscribe(console.log)
-		return () => sub.unsubscribe()
-	}, [])
+	const { clock, ClockContext } = useApp()
 
-	return <div></div>
+	return <ClockContext.Provider value={clock}>{clock?.seconds}</ClockContext.Provider>
 }
 
 export default App
