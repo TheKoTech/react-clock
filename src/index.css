@@ -1,0 +1,26 @@
+@font-face {
+	font-family: 'Roboto Mono';
+	src: url('./fonts/RobotoMono-VariableFont_wght.ttf');
+	font-weight: 1 1000;
+}
+
+@font-face {
+	font-family: 'Roboto Mono';
+	src: url('./fonts/RobotoMono-Italic-VariableFont_wght.ttf');
+	font-weight: 1 1000;
+	font-style: italic;
+}
+
+:root {
+	font-family: 'Roboto Mono', Inter, system-ui, Avenir, Helvetica, Arial,
+		sans-serif;
+
+	background-color: #242424;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+}
+
+body {
+	margin: 0;
+}
