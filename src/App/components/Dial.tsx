@@ -1,11 +1,9 @@
-import { useContext } from 'react'
-import { ClockContext } from '../../clock.context'
-
-type DialProps = {
+interface DialProps {
+	values?: string
 	unit: string
+	rotation: number
 }
 
-export default function Dial({ unit }: DialProps) {
-	const clock = useContext(ClockContext)
-	return <div className={`dial dial--${unit}`}>{clock?.seconds}</div>
+export default function Dial({ values, unit, rotation }: DialProps) {
+	return <div className={`dial dial--${unit}`}>{values}</div>
 }

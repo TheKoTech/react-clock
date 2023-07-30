@@ -1,4 +1,4 @@
-export interface Clock {
+export interface IClock {
 	seconds: number
 	minutes: number
 	hours: number

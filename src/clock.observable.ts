@@ -1,6 +1,6 @@
 import { BehaviorSubject, Observable, map } from 'rxjs'
 import { Timer } from './interfaces/timer.interface'
-import { Clock } from './interfaces/clock.interface'
+import { IClock } from './interfaces/clock.interface'
 
 const tick = (): number =>
 	setTimeout(
@@ -13,7 +13,7 @@ const timer$ = new BehaviorSubject<Timer>({
 	timer: tick(),
 })
 
-export const clock$: Observable<Clock> = timer$.pipe(
+export const clock$: Observable<IClock> = timer$.pipe(
 	map(({ date }) => ({
 		seconds: date.getSeconds(),
 		minutes: date.getMinutes(),

@@ -1,16 +1,12 @@
 import { useObservableState } from 'observable-hooks'
-import { clock$ } from '../clock'
-import { Clock } from '../interfaces/clock.interface'
-import { Context } from 'react'
-import { ClockContext } from '../clock.context'
+import { clock$ } from '../clock.observable'
+import { IClock } from '../interfaces/clock.interface'
 
 interface AppState {
-	clock?: Clock
-	ClockContext: Context<Clock | undefined>
+	clock?: IClock
 }
 
 export const useApp = (): AppState => {
 	const clock = useObservableState(clock$)
-
-	return { clock, ClockContext }
+	return { clock }
 }

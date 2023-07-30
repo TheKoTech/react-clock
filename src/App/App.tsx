@@ -1,15 +1,25 @@
 import './App.css'
 import { useApp } from './App.hook'
-import Clock from './components/Clock'
+import Dial from './components/Dial'
+import pad from './pad'
 
 function App() {
-	const { clock, ClockContext } = useApp()
+	const { clock } = useApp()
 
 	return (
 		<div className='app'>
-			<ClockContext.Provider value={clock}>
-				<Clock />
-			</ClockContext.Provider>
+			<Dial
+				unit={'seconds'}
+				values={[...Array(60).keys()]}
+				rotation={clock?.seconds}
+			>
+
+			</Dial>
+			<Dial unit={'minutes'}></Dial>
+			<Dial unit={'hours'}></Dial>
+			<Dial unit={'day'}></Dial>
+			<Dial unit={'month'}></Dial>
+			<Dial unit={'year'}></Dial>
 		</div>
 	)
 }
