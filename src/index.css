@@ -21,12 +21,29 @@
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
 
-	--seconds-dial-radius: 500px;
+	/* determines the difference between each sec, min and hour dials */
+	--time-dial-gap: 70px;
+
+	--seconds-dial-radius: 800px;
+	--minutes-dial-radius: calc(var(--seconds-dial-radius) - var(--time-dial-gap));
+	--hours-dial-radius: calc(var(--minutes-dial-radius) - var(--time-dial-gap));
+
+	--day-dial-radius: 730px;
+	--month-dial-radius: 630px;
+	--year-dial-radius: 630px;
+	--dial-transition: 300ms ease;
 }
 
-html, body, #root {
+html,
+body,
+#root,
+.app {
 	margin: 0;
+	max-height: 100%;
+	max-width: 100%;
 	height: 100%;
+	width: 100%;
+	overflow: hidden;
 }
 
 /* debug: check alignment */
@@ -43,4 +60,13 @@ html, body, #root {
 	width: 0;
 	inset: 50% 0 auto auto;
 	outline: red 1px solid;
-} */
+}
+
+.dial__mark::before {
+	content: '';
+	position: absolute;
+	inset: auto 0 0 0;
+	height: 1px;
+	background-color: red;
+}
+*/

@@ -1,8 +1,23 @@
+.dial {
+	transition: var(--dial-transition);
+}
+
 .dial__mark {
 	position: absolute;
 	inset: 50% 50% auto auto;
 	translate: 50% -50%;
 	transform: translateX(50%);
-	width: var(--seconds-dial-radius);
 	text-align: right;
+}
+
+.dial__mark--seconds {
+	width: var(--seconds-dial-radius);
+}
+
+.dial__mark--minutes {
+	width: var(--minutes-dial-radius);
+}
+
+.dial__mark--hours {
+	width: var(--hours-dial-radius);
 }
