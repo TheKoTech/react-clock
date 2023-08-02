@@ -20,9 +20,27 @@
 
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
+
+	--seconds-dial-radius: 500px;
 }
 
 html, body, #root {
 	margin: 0;
 	height: 100%;
 }
+
+/* debug: check alignment */
+/* #root::after {
+	content: '';
+	position: absolute;
+	inset: 50%;
+	outline: 1px solid pink;
+}
+
+ .dial__mark::after {
+	content: '';
+	position: absolute;
+	width: 0;
+	inset: 50% 0 auto auto;
+	outline: red 1px solid;
+} */

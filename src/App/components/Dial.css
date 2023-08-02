@@ -1,0 +1,8 @@
+.dial__mark {
+	position: absolute;
+	inset: 50% 50% auto auto;
+	translate: 50% -50%;
+	transform: translateX(50%);
+	width: var(--seconds-dial-radius);
+	text-align: right;
+}
