@@ -21,12 +21,12 @@
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
 
-	/* determines the difference between each sec, min and hour dials */
-	--time-dial-gap: 70px;
+	/* determines the radius difference between sec, min and hour dials */
+	--time-dials-offset: 70px;
 
 	--seconds-dial-radius: 800px;
-	--minutes-dial-radius: calc(var(--seconds-dial-radius) - var(--time-dial-gap));
-	--hours-dial-radius: calc(var(--minutes-dial-radius) - var(--time-dial-gap));
+	--minutes-dial-radius: calc(var(--seconds-dial-radius) - var(--time-dials-offset));
+	--hours-dial-radius: calc(var(--minutes-dial-radius) - var(--time-dials-offset));
 
 	--day-dial-radius: 730px;
 	--month-dial-radius: 630px;
